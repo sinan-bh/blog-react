@@ -5,7 +5,7 @@ import { BlogContext } from "./App";
 function BlogDetail() {
   const { blogs } = useContext(BlogContext);
   const { userID } = useParams();
-  const blog = blogs.find((blog) => blog.id === parseInt(userID));
+  const blog = blogs.find((blog) => blog.id === Number(userID));
 
   console.log(blog);
 

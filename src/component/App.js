@@ -19,12 +19,14 @@ function App() {
     setBlogs([...blogs, newBlog]);
   };
 
+  console.log(blogs);
+
   return (
     <BlogContext.Provider value={{ blogs, addBlog }}>
       <Routes>
         <Route path="/" element={<CreateBlog />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogdetails/:userId" element={<BlogDetail />} />
+        <Route path="/blogdetails/:userID" element={<BlogDetail />} />
       </Routes>
     </BlogContext.Provider>
   );
